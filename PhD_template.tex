@@ -1,0 +1,132 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass{tufte-handout}
+
+%\date{28 March 2010} % without \date command, current date is supplied
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{makecell, booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Standardize command font styles and environments
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+\newcommand{\nl}{\newline}
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+
+% Caslon typefaces
+\usepackage{mathspec}
+%\usepackage{xltxtra}
+%\usepackage{xunicode}
+%\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont{ACaslonPro}[
+%Scale=1.1,Ligatures={Common},
+%Extension = .otf,
+%UprightFont = *-Regular,
+%ItalicFont = *-Italic,
+%BoldFont = *-Bold,
+%BoldItalicFont = *-BoldItalic]
+%\setmathrm{ACaslonPro-Regular.otf}
+%\setmathfont(Digits,Latin){ACaslonPro-Italic.otf}
+
+  % Set up the spacing using fontspec features
+  \renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+  \renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+  
+\renewcommand\cellalign{tl}
+% precis environment
+\newcommand{\precis}[1]{\begin{fullwidth}\emph{#1}\end{fullwidth}\vspace{0.5em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% TITLE and AUTHOR %%%%%%%%%%%%%%
+\title[PhD Plan for CANDIDATE]{Department of \mbox{Full Luxury Galactic Metascience}\\PhD Plan for CANDIDATE}
+
+% list committee members
+\author[]{Committee:\\
+Prof.~MEMBER1\\
+Dr.~MEMBER2\\
+Dr.~MEMBER3}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+
+\begin{marginfigure}[-5.2cm]
+\includegraphics[width=3.5cm]{Minerva.pdf}
+\end{marginfigure}
+
+\section{Phenomenon}
+The subject matter to be addressed. One paragraph is often enough. A single citation for background is useful, for example.\cite{HenrichMcElreath:2003} Additional references can be included at the end bibliography by using \verb|\nocite|. \nocite{NBGA2005}
+
+\section{Theoretical Perspective}
+The framework for explaining the phenomenon. What are the implications of theory? If more than one theory is relevant, how do the implications differ? What are the current holes in the theory or theories?
+
+\section{Approach}
+Modeling and empirical research approach to address the theory/ies nominated above. Important thing is to \emph{justify} the approach in terms of theory. 
+
+\section{Specifics of Approach}
+Outline any special skills, equipment, or techniques that will be required. This includes, in the case of field research, a paragraph on the background of the field location. Data analysis approach needs a sketch. Can use citation\cite{Merowetal2014} for further detail.
+
+\section{Expected Products}
+A list of the (usually 3) articles expected for completion of the PhD. Think of each as a fantasy abstract.
+
+\begin{enumerate}
+
+\item \emph{The Evolution of Human Uniqueness.} There is wide agreement that humans are unique. But it is rarely asked: Have they always been unique? In this paper, we derive a general uniqueness theorem that states that any unique species must have been less unique at some point in the past. This theorem has implications for the achievement of world peace.
+
+\item \emph{Niche Construction, Disease Transmission, and Global Warming: Chaos Deconstructs the Block Chain.} How many buzz words can be combined in a title? In this paper, we find that the natural limit on buzz words in any specific scholarly field is always given by the triangular number $T_n$ where $n$ is one more than the number of tenured faculty in the field.
+
+\item \emph{A Bayesian Hierarchical Survival Analysis of Counting Sheep.} Just like all those other models of counting sheep, but this one will be Bayesian.
+
+\end{enumerate}
+
+\section{Schedule}
+Outline of the calendar for the work. This is necessarily rough and subject to change.
+
+\vspace{1em}
+\begin{fullwidth}
+{\centering
+\begin{longtable}{lll}
+\toprule
+\makecell{Date\\(Duration)} & Phase & Comment\\
+
+\midrule
+\makecell{Jan 2019\\(1 year)} & \makecell{Phase 1} & First wave of being awesome \\
+
+\midrule
+\makecell{Jan 2020\\(1 year)} & \makecell{Phase 2} & \makecell{Write papers \#1 and \#2} \\
+
+\midrule
+\makecell{Jan 2021\\(6 months)} & \makecell{Phase 3} & Second wave of awesomeness \\
+
+\midrule
+\makecell{Jun 2021\\(6 months)} & \makecell{Phase 4} & Write paper \#3 \\
+
+\bottomrule
+\end{longtable}
+}
+\end{fullwidth}
+
+\bibliography{bibliography}
+\bibliographystyle{abbrv}
+
+
+\end{document}
